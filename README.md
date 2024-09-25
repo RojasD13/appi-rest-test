@@ -7,10 +7,12 @@
 4️⃣ mkir gitProject <bR/>
 5️⃣ cd gitProject <br/>
 6️⃣ git clone https://github.com/RojasD13/appi-rest-test.git <br/>
-7️⃣ Ingresar nombre de usuario github y luego, cuando pida contraseña: ingresar el tocken de autentificación de ese usuario<br/>
-8️⃣ cd RandomName <br/>
+7️⃣ cd api-rest-test <br/>
+8️⃣ jar -cf apitest.jar ApiRestApplication.class
 9️⃣ ip -a (para ver la ip del equipo) <br/>
-🔟 java -jar RandomNameGenerator.jar <br/>
+🔟 java -jar apitest.jar <br/>
+
+
 <h1>Desde un navegador:</h1>
 
 ingresar la ip revisada anteriormete seguido de ":8084/api/name" (sin las comillas)
