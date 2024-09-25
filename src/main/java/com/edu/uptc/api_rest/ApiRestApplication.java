@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.BufferedReader;
@@ -87,5 +88,22 @@ public class ApiRestApplication {
 			}
 			return response;
 		}
+
+		@GetMapping
+		public List<Map<String, String>> getNamesInRange(@RequestParam int from, @RequestParam int to) {
+			List<Map<String, String>> response = new ArrayList<>();
+			if (from < 1 || to > names.size() || from > to) {
+				throw new IllegalArgumentException("Rango inválido.");
+			}
+			for (int i = from - 1; i < to; i++) {
+				String[] selectedName = names.get(i);
+				Map<String, String> nameMap = new HashMap<>();
+				nameMap.put("nombre", selectedName[0]);
+				nameMap.put("apellido", selectedName[1]);
+				response.add(nameMap);
+			}
+			return response;
+		}
+
 	}
 }
