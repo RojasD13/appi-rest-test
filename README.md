@@ -8,7 +8,7 @@
 5️⃣ cd gitProject <br/>
 6️⃣ git clone https://github.com/RojasD13/appi-rest-test.git <br/>
 7️⃣ cd api-rest-test <br/>
-8️⃣ jar -cf apitest.jar ApiRestApplication.class
+8️⃣ jar -cf apitest.jar ApiRestApplication.class<br/>
 9️⃣ ip -a (para ver la ip del equipo) <br/>
 🔟 java -jar apitest.jar <br/>
 
